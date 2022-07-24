@@ -2,10 +2,17 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+const generateMarkdown = require('./utils/generateMarkdown');
+
+
+
+// {generateMarkdown, renderLicenseBadge}
+
 
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questions =  [
+
     {
         type: 'input',
         name: 'title',
@@ -40,9 +47,10 @@ const questions = [
         message: 'Provide instructions and examples for use.',
     },
     {
-        type: 'input',
+        type: 'choices',
         name: 'license',
         message: 'Provide instructions and examples for use.',
+        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
     },
     {
         type: 'input',
@@ -62,12 +70,32 @@ const questions = [
 
 ];
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
-function init() {}
+const promptUser = () => {
+    return inquirer.prompt(questions)
+}
 
 // Function call to initialize app
-init();
+promptUser()
+.then(readmeAnswers => {
+    console.log(readmeAnswers)
+    const markdown = generateMarkdown(readmeAnswers)
+    writeToFile(markdown)
+})
+
+
+
+// TODO: Create a function to write README file
+function writeToFile(markdown) {
+//use fs to wrinte to a file 
+fs.writeFile('README-test.md', markdown, err => {
+    if (err) {
+      console.error(err);
+    }
+    console.log("file written successfully")
+  });
+}
+
+
+
+
