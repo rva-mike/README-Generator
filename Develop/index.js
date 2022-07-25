@@ -32,9 +32,10 @@ const questions =  [
         message: "Provide a brief description of your project."
     },
     {
-        type: "input",
+        type: "confirm",
         name: "tableOfContents",
-        message: "Provide a Table of Contents."
+        message: "Would you like to include a Table of Contents?",
+        default: false 
     },
     {
         type: 'input',
@@ -47,10 +48,10 @@ const questions =  [
         message: 'Provide instructions and examples for use.',
     },
     {
-        type: 'choices',
+        type: 'checkbox',
         name: 'license',
-        message: 'Provide instructions and examples for use.',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
+        message: 'Provide any license information',
+        choices: ['MIT', 'GNU GPlv3']
     },
     {
         type: 'input',
@@ -65,7 +66,7 @@ const questions =  [
     {
         type: 'input',
         name: 'questions',
-        message: 'Provide your email address for any questions',
+        message: 'Provide your email address and GitHub username for any questions.',
     },
 
 ];
