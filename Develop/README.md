@@ -1,5 +1,5 @@
 
-  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   # Mike's Project
 
@@ -22,9 +22,9 @@
   test
 
   ## License
-  GPL v3
+  MIT
 
-  https://www.gnu.org/licenses/gpl-3.0
+  https://opensource.org/licenses/MIT
 
   ## Contributing
   test
@@ -33,6 +33,8 @@
   test
 
   ## Questions
+  Please send me an email or visit my GitHub profile if you need to reach me for additional questions.
+
   Email: mikelevydesign@gmail.com
 
   GitHub Profile: https://github.com/rva-mike

@@ -90,7 +90,7 @@ promptUser()
 // TODO: Create a function to write README file
 function writeToFile(markdown) {
 //use fs to write to a file 
-fs.writeFile('README-test.md', markdown, err => {
+fs.writeFile('README.md', markdown, err => {
     if (err) {
       console.error(err);
     }
