@@ -1,13 +1,16 @@
 
+  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
   # Mike's Project
 
   ## Description
-  it has code
+  test
 
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -19,7 +22,9 @@
   test
 
   ## License
-  MIT
+  GPL v3
+
+  https://www.gnu.org/licenses/gpl-3.0
 
   ## Contributing
   test
@@ -28,5 +33,7 @@
   test
 
   ## Questions
-  test
+  Email: mikelevydesign@gmail.com
+
+  GitHub Profile: https://github.com/rva-mike
 

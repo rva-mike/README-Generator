@@ -6,13 +6,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 
 
-// {generateMarkdown, renderLicenseBadge}
-
-
-
 // TODO: Create an array of questions for user input
 const questions =  [
-
     {
         type: 'input',
         name: 'title',
@@ -29,29 +24,31 @@ const questions =  [
     {
         type: "input",
         name: "description",
-        message: "Provide a brief description of your project."
-    },
-    {
-        type: "confirm",
-        name: "tableOfContents",
-        message: "Would you like to include a Table of Contents?",
-        default: false 
+        message: "Please provide a brief description of your project. (Required)",
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please enter a description');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Describe the installation process if any.',
+        message: 'Please describe the installation process if any.',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use.',
+        message: 'Please provide instructions and examples for use.',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
-        message: 'Provide any license information',
-        choices: ['MIT', 'GNU GPlv3']
+        message: 'Which license will you use for your project?',
+        choices: ['MIT', 'GPL v3', 'Apache 2.0', 'no license']
     },
     {
         type: 'input',
@@ -65,8 +62,13 @@ const questions =  [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Provide your email address and GitHub username for any questions.',
+        name: 'email',
+        message: 'Please provide your email address for any questions.',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Provide your GitHub username to link to your GitHub profile for any questions.',
     },
 
 ];
@@ -85,10 +87,9 @@ promptUser()
 })
 
 
-
 // TODO: Create a function to write README file
 function writeToFile(markdown) {
-//use fs to wrinte to a file 
+//use fs to write to a file 
 fs.writeFile('README-test.md', markdown, err => {
     if (err) {
       console.error(err);
