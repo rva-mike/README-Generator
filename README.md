@@ -14,12 +14,9 @@ File System fs.writeFile: (https://nodejs.org/dist/latest-v12.x/docs/api/fs.html
 ## How to Use
 First, Git Clone this repository. Then using your command line, navigate to the root folder and then navigate to the 'Develop' folder. Run the command 'node index' in your command line. Answer the following prompts in the command line. Once completed, you will get a message saying 'file written successfully'. The newly generated README.md file will be in the 'Develop' folder. 
 
-## Links / Video
-[Challenge 9_ README-Generator Walkthrough.webm](https://user-images.githubusercontent.com/105617274/181096536-d4fe26ff-0dae-4cf9-a512-31993dd7657c.webm)
+## Video
 
-Walk-through video: https://drive.google.com/file/d/1_HCSuD-1_jPfmbvNzTQE3JucdRv9boOZ/view
-
-Repository Link: https://github.com/rva-mike/README-Generator
+https://drive.google.com/file/d/1JO2ZaFz86gAfqaQWaRzABGSXqfXCpn0c/view?usp=share_link
 
 ## License
 MIT
